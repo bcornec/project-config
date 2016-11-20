@@ -10,6 +10,16 @@
       - pypi-jobs
 
 - project:
+    name: alexandria
+    tarball-site: tarballs.openstack.org
+
+    jobs:
+      - python-jobs
+      - pypi-jobs
+      - 'gate-{name}-python35{suffix}':
+          suffix: '-nv'
+
+- project:
     name: almanach
     tarball-site: tarballs.openstack.org
 
